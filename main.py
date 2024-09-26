@@ -34,44 +34,43 @@ def end_test():
 window = Tk()
 window.title("Typing Speed Test")
 window.minsize(600, 400)
-window.config(bg="#f2f2f2")  # Light grey background
+window.config(bg="#2c2f33")  # Dark grey background
 
 # Frame for the sample text
-sample_frame = Frame(window, bg="#f2f2f2")
+sample_frame = Frame(window, bg="#2c2f33")  # Dark grey background
 sample_frame.pack(pady=20)
 
 # Sample text for typing
 sample_text = "The quick brown fox jumps over the lazy dog. Practice makes perfect."
-sample_label = Label(sample_frame, text=sample_text, wraplength=500, font=("Helvetica", 16), bg="#f2f2f2", fg="#333")
+sample_label = Label(sample_frame, text=sample_text, wraplength=500, font=("Helvetica", 16), bg="#2c2f33", fg="#ffffff")  # White text
 sample_label.pack()
 
 # Frame for the typing entry and buttons
-input_frame = Frame(window, bg="#f2f2f2")
+input_frame = Frame(window, bg="#2c2f33")
 input_frame.pack(pady=20)
 
 # Entry box for typing the text
-entry = Entry(input_frame, width=80, font=("Helvetica", 14), state=DISABLED)
+entry = Entry(input_frame, width=80, font=("Helvetica", 14), state=DISABLED, bg="#23272a", fg="#ffffff", insertbackground="white")  # Darker entry box with white text
 entry.pack(pady=10)
 
 # Result label to display WPM and performance feedback
-result_label = Label(window, text="", font=("Helvetica", 14), bg="#f2f2f2", fg="#333")
+result_label = Label(window, text="", font=("Helvetica", 14), bg="#2c2f33", fg="#ffffff")  # White text
 result_label.pack(pady=10)
 
 # Frame for the control buttons
-button_frame = Frame(window, bg="#f2f2f2")
+button_frame = Frame(window, bg="#2c2f33")
 button_frame.pack(pady=20)
 
 # Buttons to start and end the test
-start_button = Button(button_frame, text="Start", command=start_test, font=("Helvetica", 14), bg="#4CAF50", fg="white", padx=10, pady=5)
+start_button = Button(button_frame, text="Start", command=start_test, font=("Helvetica", 14), bg="#7289da", fg="white", padx=10, pady=5)  # Light blue button
 start_button.pack(side=LEFT, padx=10)
 
-end_button = Button(button_frame, text="End", command=end_test, font=("Helvetica", 14), bg="#f44336", fg="white", padx=10, pady=5, state=DISABLED)
+end_button = Button(button_frame, text="End", command=end_test, font=("Helvetica", 14), bg="#f04747", fg="white", padx=10, pady=5, state=DISABLED)  # Red button
 end_button.pack(side=RIGHT, padx=10)
 
 # Instructions for the user
-instructions_label = Label(window, text="Instructions: Click 'Start' to begin, and 'End' to stop the test.", font=("Helvetica", 12), bg="#f2f2f2", fg="#666")
+instructions_label = Label(window, text="Instructions: Click 'Start' to begin, and 'End' to stop the test.", font=("Helvetica", 12), bg="#2c2f33", fg="#999999")  # Light grey instructions
 instructions_label.pack(pady=10)
 
 # Run the Tkinter event loop
 window.mainloop()
-    
